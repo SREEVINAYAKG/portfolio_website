@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  background: black;
+  /* background: gray; */
+  color: #e2e8f0;
+  /* color: black; */
+  box-sizing: border-box; 
+}
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+body{
+  font-family: 'Inter', sans-serif;
+}
+.navbar {
+  width: 100%;
+  padding: 20px;
+  position: fixed;
+  z-index: 1000; 
+}
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  gap: 30px; 
+  justify-content: end;
+  list-style: none; 
+  margin: 0 30px;
+  padding: 0;
+}
+.navbar a{
+  text-decoration: none;
+  color: #dee0e3;
+  font-family: 'Fira Code', monospace;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+.navbar a:hover {
+  color: #60a5fa;
+}
+
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  gap: 50px;
+  margin: 10px;
+  padding: 20px; 
+  padding-top: 80px;
+}
+.main-content-left{
+  flex:1;
+  max-width: 600px;
+}
+.main-content-right{
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-content-right img{
+  max-width:60%;
+  height: auto;
+}
+
+.main-greeting{
+  font-family:'Fira Code', monospace;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.main-name {
+  font-size: 3rem;
+  margin: 0;
+  /* font-family: monospace; */
+}
+.main-title{
+  font-size: 2rem;
+  margin-top: 5px;
+  /* font-family: 'Fira Code', monospace; */
+}
+
+.main-description{
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  color: #94a3b8;
+  line-height: 1.8;
+  max-width: 550px;
+  padding: 10px;
+  border: 2px solid rgba(234, 231, 231, 0.423);
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.highlight {
+  color: #60a5fa;
+  font-weight: 600;
+}
+.tech-container {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: 0 auto; /* Centers the section */
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 40px;
+  font-family: 'Fira Code', monospace;
+}
+
+.tech-tags-container {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 15px;
+  justify-content: center; 
+}
+
+.tech-tag {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.422);
+  color: #94a3b8 ;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-family: 'Fira Code',monospace;
+  cursor: default;
+  transition: all 0.3s ease; 
+}
+
+.tech-tag:hover {
+  background: rgba(0, 162, 255, 0.1);
+  border-color: #49a9f8;
+  /* color: #00ccff;  */
+  color: #49a9f8; 
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.3); 
+  transform: translateY(-3px); 
+  cursor: pointer;
+}
+
+.projects-container {
+  padding: 80px 20px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.project-title{
+  width: 100%;
+  text-align: center;
+}
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.project-card {
+  width: 100%;
+  max-width: 350px; 
+  background: rgba(13, 15, 18, 0.6);
+  /* backdrop-filter: blur(10px); */
+  /* -webkit-backdrop-filter: blur(10px); */
+  border: 1px solid rgba(255, 255, 255, 0.529);
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 10px 30px rgba(0, 255, 204, 0.1);
+  border-color: rgba(0, 187, 255, 0.3);
+}
+
+.project-title {
+  font-size: 1.5rem;
+  color: #e9ebf4;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.project-description {
+  color: #d3d3d3;
+  font-size: 1rem;
+  line-height: 1.5;
+  flex-grow: 1; 
+}
+
+.project-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.project-tech-item {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #d0d0d0;
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+}
+
+.project-card {
+ 
+  position: relative; 
+  overflow: hidden; 
+  padding: 0; 
+}
+
+.project-title, .project-description, .project-tech-list {
+  padding: 0 25px;
+}
+.project-title { margin-top: 15px; }
+.project-tech-list { margin-bottom: 25px; }
+
+.small-project-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-links-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(5px);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-links-overlay {
+  opacity: 1;
+}
+
+.project-links-overlay .project-link {
+  background: rgba(96, 165, 250, 0.2);
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 1px solid #60a5fa;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-container {
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05); 
+  margin-top: 50px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-link {
+  color: #c7cde0;
+  text-decoration: none;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #60a5fa;
+}
+
+.footer-credit {
+  color: #a2a8ba;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column; 
+    text-align: center;
+    /* padding: 0 10px;  */
+  }
+  .main-content-right{
+    display:none;
+  }
+  .main-greeting {
+    font-size: 1.5rem;
+  }
+  .main-name {
+    font-size: 2rem;
+  }
+  .main-title {
+    font-size: 1.5rem;
+  }
+  .main-description {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+.footer-container {
+  margin-top: 10px;
+}
+.footer-links{
+  gap:40px;
+}
+  .navbar {
+    display: none;
+  }
+
+}
